@@ -36,7 +36,7 @@ body {
   background-color: rgba(128, 128, 128, 0.753);
   width: 50px;
   height: 3px;
-  animation: shadow 0.9s infinite;
+  animation: shadow 0.5s infinite alternate;
   border-radius: 71%;
   box-shadow: 0px 1px 9px 0px black;
 }
@@ -57,9 +57,7 @@ body {
   0% {
     transform: scaleX(0);
   }
-  50% {
-    transform: scaleX(0.5);
-  }
+
   100% {
     transform: scaleX(2);
   }
