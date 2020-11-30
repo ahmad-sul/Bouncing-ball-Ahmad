@@ -1,0 +1,66 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: pink;
+}
+
+.main {
+  height: 70vh;
+  max-width: 700px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: saddlebrown;
+  border-radius: 50%;
+  animation: ball 0.5s infinite;
+  animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  animation-direction: alternate;
+}
+.shadow {
+  background-color: rgba(128, 128, 128, 0.753);
+  width: 50px;
+  height: 3px;
+  animation: shadow 0.9s infinite;
+  border-radius: 71%;
+  box-shadow: 0px 1px 9px 0px black;
+}
+@keyframes ball {
+  0% {
+    transform: scaleY(1) translateY(100px);
+  }
+
+  50% {
+    transform: scaleY(2) translateY(150px);
+  }
+
+  100% {
+    transform: translateY(455px);
+  }
+}
+@keyframes shadow {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(0.5);
+  }
+  100% {
+    transform: scaleX(2);
+  }
+}
